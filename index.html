@@ -210,7 +210,8 @@
       line-height: .82; letter-spacing: -.035em;
       margin: 1.6rem 0 2rem -.04em;
     }
-    .hero h1 .line { display: block; overflow: hidden; padding-bottom: .06em; }
+    /* Marge interne pour que les jambages et l'italique ne soient pas rognés par overflow:hidden (compensée par des marges négatives) */
+    .hero h1 .line { display: block; overflow: hidden; padding: 0 .12em .24em; margin: 0 -.12em -.18em; }
     .hero h1 .line > span { display: inline-block; transform: translateY(105%); animation: rise 1.3s var(--ease) forwards; }
     .hero h1 .line:nth-child(2) > span { animation-delay: .12s; }
     .hero h1 em { color: var(--signal); }
